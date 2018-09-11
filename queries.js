@@ -14,25 +14,45 @@ process.stdout.write('\x1Bc');
 //   .debug(true)
 //   .then(results => console.log(results));
 
-knex.select().from('restaurants')
-  .then(results => console.log(results));
+// knex.select().from('restaurants')
+//   .then(results => console.log(results));
 
-knex
-  .select()
-  .from('restaurants')
-  .where('cuisine', 'Italian')
-  .then(results => console.log(results));
+// knex
+//   .select()
+//   .from('restaurants')
+//   .where('cuisine', 'Italian')
+//   .then(results => console.log(results));
 
-knex
-  .select('id', 'name')
-  .from('restaurants')
-  .limit(10)
-  .then(results => console.log(results));
+// knex
+//   .select('id', 'name')
+//   .from('restaurants')
+//   .limit(10)
+//   .then(results => console.log(results));
 
-knex
-  .count()
-  .from('restaurants')
-  .where('cuisine', 'Thai')
-  .then(count => console.log(count));
+// knex
+//   .count()
+//   .from('restaurants')
+//   .where('cuisine', 'Thai')
+//   .then(count => console.log(count));
 
-  
+// Count of all restaurants
+// knex('restaurants')
+//   .count()
+//   .then(console.log);
+
+// Count of Thai restaurants in 11372
+// knex('restaurants')
+//   .count()
+//   .where({
+//     address_zipcode: '11372',
+//     cuisine: 'Thai'
+//   })
+//   .then(res => console.log(res));
+
+// Italian restaurants in multiple zipcodes
+// knex('restaurants')
+//   .select('id', 'name')
+//   .whereIn('address_zipcode', ['10012', '10013', '10014'])
+//   .orderBy('name')
+//   .limit(5)
+//   .then(console.log);
