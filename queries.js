@@ -80,3 +80,5 @@ process.stdout.write('\x1Bc');
 //     address_zipcode: '11231'
 //   })
 //   .then((results) => console.log(results));
+
+// 10. Create three restaurants and return id and name
