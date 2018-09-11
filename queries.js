@@ -56,3 +56,27 @@ process.stdout.write('\x1Bc');
 //   .orderBy('name')
 //   .limit(5)
 //   .then(console.log);
+
+// 8. Create a restaurant
+// knex('restaurants')
+//   .insert({
+//     name: 'Byte Cafe',
+//     borough: 'Brooklyn',
+//     cuisine: 'coffee',
+//     address_building_number: '123',
+//     address_street: 'Atlantic Avenue',
+//     address_zipcode: '11231'
+//   });
+
+// 9. Create a restaurant and return id and name
+// knex('restaurants')
+//   .returning(['id', 'name'])
+//   .insert({
+//     name: 'Boot Cafe',
+//     borough: 'Brooklyn',
+//     cuisine: 'oil',
+//     address_building_number: '123',
+//     address_street: 'Atlantic Avenue',
+//     address_zipcode: '11231'
+//   })
+//   .then((results) => console.log(results));
