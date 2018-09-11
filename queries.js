@@ -113,8 +113,20 @@ process.stdout.write('\x1Bc');
 //   .then(console.log);
 
   // 11. Update a record
-knex('restaurants')
-  .update('name', 'DJ Reynolds Pub and Restaurant')
-  .where('nyc_restaurant_id', '30191841')
-  .returning(['id', 'name'])
-  .then(console.log);
+// knex('restaurants')
+//   .update('name', 'DJ Reynolds Pub and Restaurant')
+//   .where('nyc_restaurant_id', '30191841')
+//   .returning(['id', 'name'])
+//   .then(console.log);
+
+// 12. Delete by id
+// knex('grades')
+//   .where('id', '12')
+//   .delete()
+//   .then(console.log);
+
+// // 13. A blocked delete
+// knex('restaurants')
+//   .where('id', '22')
+//   .delete()
+//   .then(console.log);
